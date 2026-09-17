@@ -1,0 +1,118 @@
+:root {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Newsreader", serif;
+  --radius: 0.375rem;
+  --background: oklch(0.985 0.006 80);
+  --foreground: oklch(0.25 0.035 255);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--foreground);
+  --primary: oklch(0.27 0.065 257);
+  --primary-hover: oklch(0.34 0.082 257);
+  --primary-foreground: oklch(0.99 0.004 80);
+  --secondary: oklch(0.956 0.01 250);
+  --secondary-foreground: var(--foreground);
+  --muted: oklch(0.967 0.007 250);
+  --muted-foreground: oklch(0.5 0.028 255);
+  --accent: oklch(0.58 0.095 78);
+  --accent-foreground: oklch(0.22 0.03 255);
+  --destructive: oklch(0.54 0.18 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.9 0.012 250);
+  --border-strong: oklch(0.82 0.02 250);
+  --input: oklch(0.82 0.02 250);
+  --ring: oklch(0.45 0.09 257);
+  --success: oklch(0.46 0.09 155);
+  --success-soft: oklch(0.965 0.025 155);
+  --shadow-sheet: 0 2px 3px oklch(0.2 0.03 255 / 0.03), 0 22px 65px -28px oklch(0.2 0.04 255 / 0.25);
+  --shadow-button: 0 8px 18px -9px oklch(0.25 0.07 257 / 0.65);
+  --shadow-button-hover: 0 12px 22px -9px oklch(0.25 0.07 257 / 0.55);
+}
+
+* { box-sizing: border-box; border-color: var(--border); }
+html { min-width: 320px; scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--background); color: var(--foreground); font-family: var(--font-sans); letter-spacing: 0; }
+button, input, select, textarea { font: inherit; }
+
+.page-shell { min-height: 100vh; padding: clamp(1rem, 5vw, 4.5rem) clamp(.75rem, 4vw, 2.5rem) 2rem; }
+.record-sheet { width: min(100%, 960px); margin: 0 auto; overflow: hidden; border: 1px solid var(--border); border-radius: .5rem; background: var(--card); box-shadow: var(--shadow-sheet); }
+.sheet-accent { height: 5px; background: linear-gradient(90deg, var(--primary) 0 68%, var(--accent) 68%); }
+.sheet-inner { padding: clamp(2rem, 6vw, 4rem) clamp(1.25rem, 9%, 5.5rem) clamp(2rem, 6vw, 4rem); }
+.masthead { position: relative; padding-bottom: clamp(2rem, 5vw, 3.2rem); border-bottom: 1px solid var(--border); text-align: center; }
+.document-kicker { display: inline-flex; align-items: center; gap: .45rem; margin-bottom: 1.25rem; color: var(--accent); font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; }
+.record-number { position: absolute; top: 0; right: 0; display: flex; flex-direction: column; align-items: flex-end; gap: .1rem; color: var(--muted-foreground); font-size: .65rem; text-transform: uppercase; letter-spacing: .08em; }
+.record-number strong { color: var(--foreground); font-size: .67rem; font-weight: 600; letter-spacing: .02em; }
+.masthead h1 { margin: 0; color: var(--primary); font-family: var(--font-display); font-size: clamp(2.25rem, 5.5vw, 3.6rem); font-weight: 600; line-height: .98; letter-spacing: 0; }
+.masthead > p { max-width: 39rem; margin: 1.2rem auto 0; color: var(--muted-foreground); font-size: .9rem; line-height: 1.7; }
+.privacy-note { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1.15rem; padding: .45rem .7rem; border-radius: .25rem; background: var(--muted); color: var(--muted-foreground); font-size: .7rem; }
+.form-section { padding-top: clamp(2.25rem, 5vw, 3.25rem); }
+.section-heading { display: flex; align-items: center; gap: .8rem; margin-bottom: 1.6rem; padding-bottom: .85rem; border-bottom: 1px solid var(--border); }
+.section-number { display: grid; width: 1.8rem; height: 1.8rem; flex: 0 0 1.8rem; place-items: center; border-radius: 50%; background: var(--primary); color: var(--primary-foreground); font-size: .68rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+.section-heading h2 { margin: 0; color: var(--primary); font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; letter-spacing: 0; }
+.fields-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.35rem 1.5rem; }
+.field-group { display: flex; min-width: 0; flex-direction: column; }
+.field-group label { margin-bottom: .45rem; color: var(--muted-foreground); font-size: .75rem; font-weight: 600; }
+.field-group label i { margin-left: .22rem; color: var(--accent); font-style: normal; }
+.field-group label span { margin-left: .35rem; color: var(--muted-foreground); font-size: .65rem; font-weight: 500; text-transform: uppercase; letter-spacing: .06em; }
+input:not([type="file"]), select, textarea { width: 100%; min-height: 2.85rem; border: 1px solid var(--border-strong); border-radius: var(--radius); background: var(--muted); padding: .72rem .85rem; color: var(--foreground); font-size: .875rem; transition: border-color .16s ease, box-shadow .16s ease, background-color .16s ease; }
+input:not([type="file"])::placeholder, select::placeholder, textarea::placeholder { color: color-mix(in oklab, var(--muted-foreground) 65%, transparent); }
+input:not([type="file"]):hover, select:hover, textarea:hover { border-color: var(--muted-foreground); background: var(--card); }
+input:not([type="file"]):focus, select:focus, textarea:focus { outline: none; border-color: var(--ring); background: var(--card); box-shadow: 0 0 0 3px color-mix(in oklab, var(--ring) 15%, transparent); }
+select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%), linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%); background-position: calc(100% - 16px) 50%, calc(100% - 11px) 50%; background-repeat: no-repeat; background-size: 5px 5px; padding-right: 2.5rem; }
+textarea { min-height: 7rem; resize: vertical; line-height: 1.55; }
+.was-validated input:not([type="file"]):invalid, .was-validated select:invalid, .was-validated textarea:invalid { border-color: var(--destructive); background: color-mix(in oklab, var(--destructive) 5%, var(--card)); }
+.was-validated input:not([type="file"]):invalid ~ small, .was-validated select:invalid ~ small, .was-validated textarea:invalid ~ small { display: block; }
+.photo-control { display: flex; align-items: center; gap: 1rem; min-height: 4.5rem; }
+.photo-preview { display: grid; width: 4.5rem; height: 4.5rem; flex: 0 0 4.5rem; overflow: hidden; place-items: center; border: 1px dashed var(--border-strong); border-radius: 50%; background: var(--muted); color: var(--muted-foreground); }
+.photo-preview img { width: 100%; height: 100%; object-fit: cover; }
+.photo-actions { min-width: 0; }
+.file-name { display: block; max-width: 19rem; margin-top: .4rem; color: var(--muted-foreground); font-size: .7rem; overflow-wrap: anywhere; }
+.photo-error { display: block; margin-top: .25rem; color: var(--destructive); font-size: .7rem; }
+.submit-row { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+.submit-row p { margin: 0; color: var(--muted-foreground); font-size: .72rem; }
+.submit-row p i { color: var(--accent); font-style: normal; }
+.confirmation { display: flex; align-items: center; gap: .85rem; margin-top: 2rem; padding: 1rem 1.1rem; border: 1px solid color-mix(in oklab, var(--success) 30%, transparent); border-radius: var(--radius); background: var(--success-soft); color: var(--success); animation: reveal .35s ease-out both; }
+.confirmation[hidden] { display: none; }
+.confirmation b { display: grid; width: 1.8rem; height: 1.8rem; flex: 0 0 1.8rem; place-items: center; border-radius: 50%; background: var(--success); color: var(--primary-foreground); font-size: .9rem; }
+.confirmation div:nth-child(2) { flex: 1; }
+.confirmation strong { color: var(--foreground); font-family: var(--font-display); font-size: 1.05rem; }
+.confirmation p { margin: .1rem 0 0; color: var(--muted-foreground); font-size: .76rem; }
+.page-footer { margin: 1.25rem auto 0; color: var(--muted-foreground); text-align: center; font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; }
+@keyframes reveal { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+.field-group small { display: none; margin-top: .4rem; color: var(--destructive); font-size: .7rem; }
+.wide { grid-column: 1/-1; }
+.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.photo-group { grid-column: span 1; }
+.button { display: inline-flex; min-height: 2.4rem; align-items: center; justify-content: center; gap: .5rem; border-radius: var(--radius); padding: .55rem 1rem; font-weight: 600; font-size: .78rem; cursor: pointer; transition: .16s ease; }
+.button-primary { min-height: 3rem; border: 0; background: var(--primary); color: var(--primary-foreground); box-shadow: var(--shadow-button); }
+.button-primary:hover { background: var(--primary-hover); transform: translateY(-1px); }
+.button-outline { border: 1px solid var(--border-strong); background: var(--card); color: var(--foreground); }
+.button-ghost { border: 0; background: transparent; color: var(--muted-foreground); }
+.button:focus-visible { outline: 3px solid color-mix(in oklab, var(--ring) 30%, transparent); outline-offset: 2px; }
+.photo-group label.button { margin: 0; }
+
+@media (max-width: 760px) {
+  .three { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  .sheet-inner { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .record-number { position: static; align-items: center; margin: -1rem 0 1.4rem; }
+  .fields-grid { grid-template-columns: 1fr; gap: 1.1rem; }
+  .submit-row, .confirmation { align-items: stretch; flex-direction: column; }
+  .submit-row button { width: 100%; }
+  .confirmation button { margin-top: .25rem; }
+}
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }
+
+@media print {
+  @page { size: A4; margin: 12mm; }
+  body { background: var(--card); }
+  .page-shell { padding: 0; }
+  .record-sheet { width: 100%; border: 0; box-shadow: none; }
+  .sheet-inner { padding: 10mm; }
+  .privacy-note, .photo-actions button, .submit-row, .confirmation button, .page-footer { display: none !important; }
+  .form-section { break-inside: avoid; padding-top: 7mm; }
+  input:not([type="file"]), select, textarea { background: var(--card); }
+}
