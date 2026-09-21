@@ -287,6 +287,25 @@ textarea {
   display: block;
 }
 
+.field-group small {
+  display: none;
+  margin-top: .4rem;
+  color: var(--destructive);
+  font-size: .7rem;
+}
+
+.wide {
+  grid-column: 1 / -1;
+}
+
+.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.photo-group {
+  grid-column: span 1;
+}
+
 .photo-control {
   display: flex;
   align-items: center;
@@ -331,6 +350,58 @@ textarea {
   margin-top: .25rem;
   color: var(--destructive);
   font-size: .7rem;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  border-radius: var(--radius);
+  padding: .55rem 1rem;
+  font-weight: 600;
+  font-size: .78rem;
+  cursor: pointer;
+  transition: .16s ease;
+}
+
+.button-primary {
+  min-height: 3rem;
+  border: 0;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-button);
+}
+
+.button-primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.button-outline {
+  border: 1px solid var(--border-strong);
+  background: var(--card);
+  color: var(--foreground);
+}
+
+.button-outline:hover {
+  background: var(--muted);
+}
+
+.button-ghost {
+  border: 0;
+  background: transparent;
+  color: var(--muted-foreground);
+}
+
+.button:focus-visible {
+  outline: 3px solid color-mix(in oklab, var(--ring) 30%, transparent);
+  outline-offset: 2px;
+}
+
+.photo-group label.button {
+  margin: 0;
 }
 
 .submit-row {
@@ -418,73 +489,6 @@ textarea {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-.field-group small {
-  display: none;
-  margin-top: .4rem;
-  color: var(--destructive);
-  font-size: .7rem;
-}
-
-.wide {
-  grid-column: 1 / -1;
-}
-
-.three {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.photo-group {
-  grid-column: span 1;
-}
-
-.button {
-  display: inline-flex;
-  min-height: 2.4rem;
-  align-items: center;
-  justify-content: center;
-  gap: .5rem;
-  border-radius: var(--radius);
-  padding: .55rem 1rem;
-  font-weight: 600;
-  font-size: .78rem;
-  cursor: pointer;
-  transition: .16s ease;
-}
-
-.button-primary {
-  min-height: 3rem;
-  border: 0;
-  background: var(--primary);
-  color: var(--primary-foreground);
-  box-shadow: var(--shadow-button);
-}
-
-.button-primary:hover {
-  background: var(--primary-hover);
-  transform: translateY(-1px);
-}
-
-.button-outline {
-  border: 1px solid var(--border-strong);
-  background: var(--card);
-  color: var(--foreground);
-}
-
-.button-ghost {
-  border: 0;
-  background: transparent;
-  color: var(--muted-foreground);
-}
-
-.button:focus-visible {
-  outline: 3px solid color-mix(in oklab, var(--ring) 30%, transparent);
-  outline-offset: 2px;
-}
-
-.photo-group label.button {
-  margin: 0;
 }
 
 @media (max-width: 760px) {
@@ -582,3 +586,4 @@ textarea {
     background: var(--card);
   }
 }
+

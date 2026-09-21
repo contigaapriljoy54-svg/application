@@ -1,10 +1,11 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Complete and review your official personal record application.">
-  <title>Application Form for Work</title>
+  <meta name="description" content="Complete your application for a Web Developer position.">
+  <title>Application for Web Developer Position</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,43 +16,54 @@
 
 <body>
 <main class="page-shell">
+
   <article class="record-sheet">
+
     <div class="sheet-accent"></div>
 
     <div class="sheet-inner">
+
       <header class="masthead">
-        <div class="document-kicker">▧&nbsp; Official record form</div>
+
+        <div class="document-kicker">
+          ▧&nbsp; Official application form
+        </div>
 
         <div class="record-number">
-          <span>Record no.</span>
+          <span>Application no.</span>
           <strong>Assigned on receipt</strong>
         </div>
 
-        <h1>Application for Personal Record</h1>
+        <h1>Application for Web Developer Position</h1>
 
         <p>
-          Complete every marked field in full. Information provided here forms
-          your official record and should match your legal documents.
+          Complete every marked field in full. The information provided
+          will be used to review your application for the Web Developer position.
         </p>
 
         <div class="privacy-note">
           ✓
           <span>Your information remains on this device in this demonstration.</span>
         </div>
+
       </header>
 
       <form id="applicationForm" novalidate>
 
         <section class="form-section" aria-labelledby="identity-title">
+
           <div class="section-heading">
             <span class="section-number">01</span>
-            <h2 id="identity-title">Identity</h2>
+            <h2 id="identity-title">Personal Information</h2>
           </div>
 
           <div class="fields-grid">
 
             <div class="field-group">
-              <label for="givenName">Given name <i>•</i></label>
+              <label for="givenName">
+                Given name <i>•</i>
+              </label>
+
               <input
                 id="givenName"
                 name="givenName"
@@ -59,22 +71,30 @@
                 autocomplete="given-name"
                 placeholder="e.g. Maria"
               >
+
               <small>Please enter your given name.</small>
             </div>
 
             <div class="field-group">
-              <label for="middleName">Middle name</label>
+              <label for="middleName">
+                Middle name
+              </label>
+
               <input
                 id="middleName"
                 name="middleName"
                 autocomplete="additional-name"
                 placeholder="Optional"
               >
+
               <small>Please check this field.</small>
             </div>
 
             <div class="field-group">
-              <label for="familyName">Family name <i>•</i></label>
+              <label for="familyName">
+                Family name <i>•</i>
+              </label>
+
               <input
                 id="familyName"
                 name="familyName"
@@ -82,11 +102,15 @@
                 autocomplete="family-name"
                 placeholder="e.g. Santos"
               >
+
               <small>Please enter your family name.</small>
             </div>
 
             <div class="field-group">
-              <label for="suffix">Suffix</label>
+              <label for="suffix">
+                Suffix
+              </label>
+
               <select id="suffix" name="suffix">
                 <option value="" selected>None</option>
                 <option value="Jr.">Jr.</option>
@@ -96,11 +120,15 @@
                 <option value="IV">IV</option>
                 <option value="V">V</option>
               </select>
+
               <small>Please select a suffix.</small>
             </div>
 
             <div class="field-group">
-              <label for="birthDate">Date of birth <i>•</i></label>
+              <label for="birthDate">
+                Date of birth <i>•</i>
+              </label>
+
               <input
                 id="birthDate"
                 name="birthDate"
@@ -108,11 +136,15 @@
                 required
                 autocomplete="bday"
               >
+
               <small>Please enter your date of birth.</small>
             </div>
 
             <div class="field-group">
-              <label for="age">Age <i>•</i></label>
+              <label for="age">
+                Age <i>•</i>
+              </label>
+
               <input
                 id="age"
                 name="age"
@@ -122,37 +154,53 @@
                 required
                 placeholder="e.g. 25"
               >
+
               <small>Please enter your age from 0 to 150.</small>
             </div>
 
             <div class="field-group">
-              <label for="gender">Gender <i>•</i></label>
+              <label for="gender">
+                Gender <i>•</i>
+              </label>
+
               <select id="gender" name="gender" required>
-                <option value="" selected disabled>Select an option</option>
+                <option value="" selected disabled>
+                  Select an option
+                </option>
                 <option>Female</option>
                 <option>Male</option>
                 <option>Non-binary</option>
                 <option>Other</option>
                 <option>Prefer not to say</option>
               </select>
+
               <small>Please select an option.</small>
             </div>
 
             <div class="field-group">
-              <label for="civilStatus">Civil status <i>•</i></label>
+              <label for="civilStatus">
+                Civil status <i>•</i>
+              </label>
+
               <select id="civilStatus" name="civilStatus" required>
-                <option value="" selected disabled>Select an option</option>
+                <option value="" selected disabled>
+                  Select an option
+                </option>
                 <option>Single</option>
                 <option>Married</option>
                 <option>Widowed</option>
                 <option>Divorced</option>
                 <option>Separated</option>
               </select>
+
               <small>Please select an option.</small>
             </div>
 
             <div class="field-group">
-              <label for="nationality">Nationality <i>•</i></label>
+              <label for="nationality">
+                Nationality <i>•</i>
+              </label>
+
               <input
                 id="nationality"
                 name="nationality"
@@ -160,15 +208,18 @@
                 autocomplete="country-name"
                 placeholder="e.g. Filipino"
               >
+
               <small>Please enter your nationality.</small>
             </div>
 
             <div class="field-group photo-group">
+
               <label for="photo">
                 Photograph <span>Optional</span>
               </label>
 
               <div class="photo-control">
+
                 <div
                   id="photoPreview"
                   class="photo-preview"
@@ -178,6 +229,7 @@
                 </div>
 
                 <div class="photo-actions">
+
                   <input
                     id="photo"
                     name="photo"
@@ -187,7 +239,11 @@
                   >
 
                   <div>
-                    <label class="button button-outline" for="photo">
+
+                    <label
+                      class="button button-outline"
+                      for="photo"
+                    >
                       Choose photo
                     </label>
 
@@ -200,9 +256,13 @@
                     >
                       Remove
                     </button>
+
                   </div>
 
-                  <span id="fileName" class="file-name">
+                  <span
+                    id="fileName"
+                    class="file-name"
+                  >
                     JPG, PNG, or WebP · max 5 MB
                   </span>
 
@@ -211,22 +271,32 @@
                     class="photo-error"
                     role="alert"
                   ></span>
+
                 </div>
+
               </div>
+
             </div>
 
           </div>
+
         </section>
 
         <section class="form-section" aria-labelledby="contact-title">
+
           <div class="section-heading">
             <span class="section-number">02</span>
-            <h2 id="contact-title">Contact</h2>
+            <h2 id="contact-title">Contact Information</h2>
           </div>
 
           <div class="fields-grid">
+
             <div class="field-group">
-              <label for="email">Email address <i>•</i></label>
+
+              <label for="email">
+                Email address <i>•</i>
+              </label>
+
               <input
                 id="email"
                 name="email"
@@ -235,11 +305,17 @@
                 autocomplete="email"
                 placeholder="name@example.com"
               >
+
               <small>Please enter a valid email address.</small>
+
             </div>
 
             <div class="field-group">
-              <label for="phone">Phone number <i>•</i></label>
+
+              <label for="phone">
+                Phone number <i>•</i>
+              </label>
+
               <input
                 id="phone"
                 name="phone"
@@ -249,20 +325,30 @@
                 pattern="[0-9+() -]{7,20}"
                 placeholder="+63 900 000 0000"
               >
+
               <small>Please enter a valid phone number.</small>
+
             </div>
+
           </div>
+
         </section>
 
         <section class="form-section" aria-labelledby="residence-title">
+
           <div class="section-heading">
             <span class="section-number">03</span>
-            <h2 id="residence-title">Residence</h2>
+            <h2 id="residence-title">Address</h2>
           </div>
 
           <div class="fields-grid">
+
             <div class="field-group wide">
-              <label for="street">Street address <i>•</i></label>
+
+              <label for="street">
+                Street address <i>•</i>
+              </label>
+
               <input
                 id="street"
                 name="street"
@@ -270,92 +356,238 @@
                 autocomplete="street-address"
                 placeholder="House number and street"
               >
+
               <small>Please enter your street address.</small>
+
             </div>
 
             <div class="field-group">
-              <label for="city">City / municipality <i>•</i></label>
+
+              <label for="city">
+                City / municipality <i>•</i>
+              </label>
+
               <input
                 id="city"
                 name="city"
                 required
                 autocomplete="address-level2"
               >
+
               <small>Please enter your city.</small>
+
             </div>
 
             <div class="field-group">
-              <label for="province">Province / state <i>•</i></label>
+
+              <label for="province">
+                Province / state <i>•</i>
+              </label>
+
               <input
                 id="province"
                 name="province"
                 required
                 autocomplete="address-level1"
               >
+
               <small>Please enter your province or state.</small>
+
             </div>
 
             <div class="field-group">
-              <label for="postalCode">Postal code <i>•</i></label>
+
+              <label for="postalCode">
+                Postal code <i>•</i>
+              </label>
+
               <input
                 id="postalCode"
                 name="postalCode"
                 required
                 autocomplete="postal-code"
               >
+
               <small>Please enter your postal code.</small>
+
             </div>
 
             <div class="field-group">
-              <label for="country">Country <i>•</i></label>
+
+              <label for="country">
+                Country <i>•</i>
+              </label>
+
               <input
                 id="country"
                 name="country"
                 required
                 autocomplete="country-name"
               >
+
               <small>Please enter your country.</small>
+
             </div>
+
           </div>
+
         </section>
 
         <section class="form-section" aria-labelledby="education-title">
+
           <div class="section-heading">
             <span class="section-number">04</span>
-            <h2 id="education-title">Education &amp; occupation</h2>
+            <h2 id="education-title">Educational Background</h2>
           </div>
 
           <div class="fields-grid">
-            <div class="field-group">
-              <label for="education">Highest attainment <i>•</i></label>
 
-              <select id="education" name="education" required>
-                <option value="" selected disabled>Select an option</option>
+            <div class="field-group">
+
+              <label for="education">
+                Highest educational attainment <i>•</i>
+              </label>
+
+              <select
+                id="education"
+                name="education"
+                required
+              >
+
+                <option value="" selected disabled>
+                  Select an option
+                </option>
+
                 <option>High school</option>
                 <option>Vocational</option>
                 <option>Bachelor's degree</option>
                 <option>Master's degree</option>
                 <option>Doctorate</option>
+
               </select>
 
-              <small>Please select an option.</small>
+              <small>
+                Please select your highest educational attainment.
+              </small>
+
             </div>
 
             <div class="field-group">
-              <label for="occupation">Occupation</label>
+
+              <label for="schoolGraduated">
+                School graduated <i>•</i>
+              </label>
+
+              <input
+                id="schoolGraduated"
+                name="schoolGraduated"
+                required
+                autocomplete="organization"
+                placeholder="e.g. Central Philippines State University"
+              >
+
+              <small>
+                Please enter the name of your school.
+              </small>
+
+            </div>
+
+            <div class="field-group">
+
+              <label for="degree">
+                Degree / Course <i>•</i>
+              </label>
+
+              <input
+                id="degree"
+                name="degree"
+                required
+                placeholder="e.g. Bachelor of Science in Information Technology"
+              >
+
+              <small>
+                Please enter your degree or course.
+              </small>
+
+            </div>
+
+            <div class="field-group">
+
+              <label for="yearGraduated">
+                Year graduated <i>•</i>
+              </label>
+
+              <input
+                id="yearGraduated"
+                name="yearGraduated"
+                type="number"
+                min="1900"
+                max="2100"
+                required
+                placeholder="e.g. 2026"
+              >
+
+              <small>
+                Please enter your year of graduation.
+              </small>
+
+            </div>
+
+            <div class="field-group wide">
+
+              <label for="awards">
+                Awards / Honors
+              </label>
+
+              <input
+                id="awards"
+                name="awards"
+                placeholder="e.g. Dean's Lister, Cum Laude, Academic Excellence Award"
+              >
+
+              <small>
+                Please enter your awards or honors.
+              </small>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="form-section" aria-labelledby="occupation-title">
+
+          <div class="section-heading">
+            <span class="section-number">05</span>
+            <h2 id="occupation-title">Occupation</h2>
+          </div>
+
+          <div class="fields-grid">
+
+            <div class="field-group">
+
+              <label for="occupation">
+                Current occupation
+              </label>
 
               <input
                 id="occupation"
                 name="occupation"
                 autocomplete="organization-title"
-                placeholder="Optional"
+                placeholder="e.g. Web Developer"
               >
 
-              <small>Please check this field.</small>
+              <small>
+                Please check this field.
+              </small>
+
             </div>
 
-            <div class="field-group wide">
-              <label for="employer">Employer or company name</label>
+            <div class="field-group">
+
+              <label for="employer">
+                Employer or company name
+              </label>
 
               <input
                 id="employer"
@@ -364,32 +596,69 @@
                 placeholder="Optional"
               >
 
-              <small>Please check this field.</small>
+              <small>
+                Please check this field.
+              </small>
+
             </div>
+
           </div>
+
         </section>
 
         <section class="form-section" aria-labelledby="emergency-title">
+
           <div class="section-heading">
-            <span class="section-number">05</span>
-            <h2 id="emergency-title">Emergency contact</h2>
+            <span class="section-number">06</span>
+            <h2 id="emergency-title">Emergency Contact</h2>
           </div>
 
           <div class="fields-grid three">
+
             <div class="field-group">
-              <label for="emergencyName">Full name <i>•</i></label>
-              <input id="emergencyName" name="emergencyName" required>
-              <small>Please enter a full name.</small>
+
+              <label for="emergencyName">
+                Full name <i>•</i>
+              </label>
+
+              <input
+                id="emergencyName"
+                name="emergencyName"
+                required
+                placeholder="Full name"
+              >
+
+              <small>
+                Please enter a full name.
+              </small>
+
             </div>
 
             <div class="field-group">
-              <label for="relationship">Relationship <i>•</i></label>
-              <input id="relationship" name="relationship" required>
-              <small>Please enter a relationship.</small>
+
+              <label for="relationship">
+                Relationship <i>•</i>
+              </label>
+
+              <input
+                id="relationship"
+                name="relationship"
+                required
+                placeholder="e.g. Mother"
+              >
+
+              <small>
+                Please enter a relationship.
+              </small>
+
             </div>
 
             <div class="field-group">
-              <label for="emergencyPhone">Phone number <i>•</i></label>
+
+              <label for="emergencyPhone">
+                Phone number <i>•</i>
+              </label>
+
               <input
                 id="emergencyPhone"
                 name="emergencyPhone"
@@ -398,20 +667,31 @@
                 pattern="[0-9+() -]{7,20}"
                 placeholder="+63 900 000 0000"
               >
-              <small>Please enter a valid phone number.</small>
+
+              <small>
+                Please enter a valid phone number.
+              </small>
+
             </div>
+
           </div>
+
         </section>
 
         <section class="form-section" aria-labelledby="remarks-title">
+
           <div class="section-heading">
-            <span class="section-number">06</span>
+            <span class="section-number">07</span>
             <h2 id="remarks-title">Remarks</h2>
           </div>
 
           <div class="fields-grid">
+
             <div class="field-group wide">
-              <label for="remarks">Anything else to note</label>
+
+              <label for="remarks">
+                Anything else to note
+              </label>
 
               <textarea
                 id="remarks"
@@ -420,20 +700,30 @@
                 placeholder="Add relevant details or special considerations (optional)"
               ></textarea>
 
-              <small>Please check this field.</small>
+              <small>
+                Please check this field.
+              </small>
+
             </div>
+
           </div>
+
         </section>
 
         <div class="submit-row">
+
           <p>
             <i>•</i>
             Required fields must be completed before submission.
           </p>
 
-          <button class="button button-primary" type="submit">
+          <button
+            class="button button-primary"
+            type="submit"
+          >
             Submit application <span>→</span>
           </button>
+
         </div>
 
       </form>
@@ -445,12 +735,15 @@
         tabindex="-1"
         hidden
       >
+
         <b>✓</b>
 
         <div>
           <strong>Application received</strong>
+
           <p>
-            Your information has been recorded. Keep a copy for your reference.
+            Your application has been recorded.
+            Keep a copy for your reference.
           </p>
         </div>
 
@@ -461,16 +754,20 @@
         >
           Print copy
         </button>
+
       </div>
 
     </div>
+
   </article>
 
   <p class="page-footer">
-    Personal Record Services · Confidential document
+    Web Developer Recruitment · Confidential application
   </p>
+
 </main>
 
 <script src="script.js"></script>
 </body>
 </html>
+```
